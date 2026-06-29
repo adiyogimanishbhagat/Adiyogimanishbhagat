@@ -178,3 +178,7 @@ Jhalu, Bijnor.</b>
 
 </body>
 </html>
+<a class="btn"
+href="https://maps.app.goo.gl/hSb5Pg58e2NxakU39">
+Get Directions
+</a>
