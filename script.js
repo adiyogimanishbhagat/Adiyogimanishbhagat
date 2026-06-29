@@ -1,15 +1,16 @@
-// Adiyogi Manish Bhagat Website
+let topButton = document.getElementById("topBtn");
 
-document.addEventListener("DOMContentLoaded", function () {
-
-  console.log("Website Loaded Successfully");
-
-  const bookBtn = document.querySelector(".btn");
-
-  if (bookBtn) {
-    bookBtn.addEventListener("click", function () {
-      alert("Thank you for choosing Adiyogi Manish Bhagat.\nYou will now be redirected to WhatsApp for booking.");
-    });
+window.onscroll = function () {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    topButton.style.display = "block";
+  } else {
+    topButton.style.display = "none";
   }
+};
 
-});
+function topFunction() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
