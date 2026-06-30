@@ -78,7 +78,7 @@ Call Now
 
 <p>
 
-My name is <b>Manish Kumar Bhagat</b>.
+My name is <b>Adiyogi Manish Bhagat</b>.
 
 I have been associated with naturopathy for around <b>8 years</b>.
 
