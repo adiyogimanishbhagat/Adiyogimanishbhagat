@@ -1,1 +1,16 @@
-
+{
+  "name": "Adiyogi Manish Bhagat",
+  "short_name": "Adiyogi",
+  "start_url": "/Adiyogimanishbhagat/",
+  "display": "standalone",
+  "background_color": "#0b6b3a",
+  "theme_color": "#0b6b3a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/manish.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ]
+}
