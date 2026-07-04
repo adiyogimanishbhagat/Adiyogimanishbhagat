@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#0b6b3a">
 <meta name="description" content="Professional Massage Therapy, Naturopathy, Nature Trails & Jungle Homestay near Shikhar Falls, Dehradun">
-<meta name="keywords" content="massage, naturopathy, therapy, wellness, Dehradun">
+<meta name="keywords" content="massage, naturopathy, therapy, wellness, Dehradun, herbal products">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Adiyogi">
@@ -20,88 +20,448 @@
 
 <body>
 
-<header>
-<h1>🌿 Adiyogi Manish Bhagat</h1>
-<p>Massage Therapist | Naturopathy | Nature Guide</p>
+<!-- Loading Animation -->
+<div id="loadingScreen" class="loading-screen">
+  <div class="loader"></div>
+  <p>🌿 Loading Adiyogi...</p>
+</div>
+
+<!-- Dark Mode Toggle -->
+<button id="darkModeToggle" class="dark-mode-toggle" title="Toggle Dark Mode">🌙</button>
+
+<!-- Header -->
+<header class="fade-in">
+  <h1>🌿 Adiyogi Manish Bhagat</h1>
+  <p>Massage Therapist | Naturopathy | Nature Guide</p>
 </header>
 
-<nav>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#gallery">Gallery</a>
-<a href="#contact">Contact</a>
+<!-- Navigation -->
+<nav class="sticky-nav">
+  <a href="#about" class="nav-link">About</a>
+  <a href="#services" class="nav-link">Services</a>
+  <a href="#products" class="nav-link">Products</a>
+  <a href="#gallery" class="nav-link">Gallery</a>
+  <a href="#location" class="nav-link">Location</a>
+  <a href="#testimonials" class="nav-link">Reviews</a>
+  <a href="#contact" class="nav-link">Contact</a>
 </nav>
 
-<section id="about">
-<h2>About Me</h2>
-<img src="file_00000000156c72078d332ea5d9343e46.png" alt="Adiyogi Manish Bhagat" class="profile-img">
-<p>
-Welcome to Adiyogi Nature Wellness.
-Professional Massage Therapy, Nature Healing,
-Fire Cupping, Jungle Homestay and Natural Products
-near Shikhar Falls, Dehradun.
-</p>
+<!-- About Section -->
+<section id="about" class="fade-in-up">
+  <h2>About Me</h2>
+  <img src="file_00000000156c72078d332ea5d9343e46.png" alt="Adiyogi Manish Bhagat" class="profile-img">
+  <p>
+    Welcome to Adiyogi Nature Wellness. I'm a certified professional offering holistic healing through massage therapy, naturopathy, and nature-based wellness. Located near the serene Shikhar Falls in Dehradun, I provide authentic wellness experiences combined with premium herbal products.
+  </p>
 </section>
 
-<section id="services">
-<h2>Our Services</h2>
-
-<ul class="services-list">
-<li>💆 Full Body Massage - ₹1500</li>
-<li>👣 Foot Massage - ₹500</li>
-<li>🦵 Leg Massage - ₹800</li>
-<li>🧠 Head Massage - ₹300</li>
-<li>🔥 Fire Cupping - ₹1500</li>
-<li>🥾 Nature Trail - ₹2000</li>
-<li>🏕️ Jungle Homestay - ₹3000</li>
-</ul>
-
-<a href="https://wa.me/918804828088" class="btn">
-📱 Book on WhatsApp
-</a>
-
+<!-- Services Section -->
+<section id="services" class="fade-in-up">
+  <h2>Our Services</h2>
+  
+  <div class="services-grid">
+    <div class="service-card slide-in-left">
+      <h3>💆 Body Massage</h3>
+      <p>Full Body Massage - ₹1500</p>
+      <button class="book-btn" onclick="openBooking('Full Body Massage', 1500)">Book Now</button>
+    </div>
+    <div class="service-card slide-in-left">
+      <h3>👣 Foot Massage</h3>
+      <p>Foot Massage - ₹500</p>
+      <button class="book-btn" onclick="openBooking('Foot Massage', 500)">Book Now</button>
+    </div>
+    <div class="service-card slide-in-left">
+      <h3>🦵 Leg Massage</h3>
+      <p>Leg Massage - ₹800</p>
+      <button class="book-btn" onclick="openBooking('Leg Massage', 800)">Book Now</button>
+    </div>
+    <div class="service-card slide-in-left">
+      <h3>🧠 Head Massage</h3>
+      <p>Head Massage - ₹300</p>
+      <button class="book-btn" onclick="openBooking('Head Massage', 300)">Book Now</button>
+    </div>
+    <div class="service-card slide-in-left">
+      <h3>🔥 Fire Cupping</h3>
+      <p>Fire Cupping - ₹1500</p>
+      <button class="book-btn" onclick="openBooking('Fire Cupping', 1500)">Book Now</button>
+    </div>
+    <div class="service-card slide-in-left">
+      <h3>🥾 Nature Trail</h3>
+      <p>Nature Trail - ₹2000</p>
+      <button class="book-btn" onclick="openBooking('Nature Trail', 2000)">Book Now</button>
+    </div>
+    <div class="service-card slide-in-left">
+      <h3>🏕️ Jungle Homestay</h3>
+      <p>Jungle Homestay - ₹3000</p>
+      <button class="book-btn" onclick="openBooking('Jungle Homestay', 3000)">Book Now</button>
+    </div>
+  </div>
 </section>
 
-<section id="gallery">
-<h2>Gallery</h2>
-<div class="gallery">
-<img src="file_00000000156c72078d332ea5d9343e46.png" alt="Adiyogi Manish Bhagat">
-<img src="file_0000000021b0720899053daf4defdba3.png" alt="Massage Service">
-<img src="file_0000000035e07206a1aabd371d437ed2.png" alt="Massage Service">
-<img src="file_00000000828c72068e96436910c162eb.png" alt="Nature Trail">
-<img src="file_000000009d187209b563a905806c0ecc.png" alt="Natural Products">
-<img src="file_000000009f5471faafc90134dc326c5a.png" alt="Jungle Retreat">
+<!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeBooking()">&times;</span>
+    <h2>📅 Book Your Session</h2>
+    
+    <div class="booking-form">
+      <div class="form-group">
+        <label>Service:</label>
+        <input type="text" id="serviceName" readonly>
+      </div>
+      
+      <div class="form-group">
+        <label>Price:</label>
+        <input type="text" id="servicePrice" readonly>
+      </div>
+      
+      <div class="form-group">
+        <label>Select Date:</label>
+        <input type="date" id="bookingDate" min="" required>
+      </div>
+      
+      <div class="form-group">
+        <label>Select Time:</label>
+        <select id="bookingTime" required>
+          <option value="">Choose Time</option>
+          <option value="09:00">09:00 AM</option>
+          <option value="10:00">10:00 AM</option>
+          <option value="11:00">11:00 AM</option>
+          <option value="12:00">12:00 PM</option>
+          <option value="14:00">02:00 PM</option>
+          <option value="15:00">03:00 PM</option>
+          <option value="16:00">04:00 PM</option>
+          <option value="17:00">05:00 PM</option>
+          <option value="18:00">06:00 PM</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label>Your Name:</label>
+        <input type="text" id="clientName" placeholder="Your Full Name" required>
+      </div>
+      
+      <div class="form-group">
+        <label>Your Phone:</label>
+        <input type="tel" id="clientPhone" placeholder="Your Phone Number" required>
+      </div>
+      
+      <button class="book-submit-btn" onclick="submitBooking()">Confirm Booking on WhatsApp</button>
+    </div>
+  </div>
 </div>
+
+<!-- Products Section -->
+<section id="products" class="fade-in-up">
+  <h2>🛍️ Our Premium Products</h2>
+  
+  <!-- Herbal Oils -->
+  <div class="product-category">
+    <h3>🌿 Herbal Oils</h3>
+    <div class="products-grid">
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🫗</div>
+        <h4>Hair Oil</h4>
+        <p class="product-price">₹300</p>
+        <p class="product-desc">Premium herbal hair oil for strength & shine</p>
+        <button class="add-to-cart" onclick="addToCart('Hair Oil', 300)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🫗</div>
+        <h4>Face Oil</h4>
+        <p class="product-price">₹800</p>
+        <p class="product-desc">Natural face oil for glowing skin</p>
+        <button class="add-to-cart" onclick="addToCart('Face Oil', 800)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🫗</div>
+        <h4>Beard Oil</h4>
+        <p class="product-price">₹600</p>
+        <p class="product-desc">Nourishing oil for healthy beard</p>
+        <button class="add-to-cart" onclick="addToCart('Beard Oil', 600)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🫗</div>
+        <h4>Pain Relief Oil</h4>
+        <p class="product-price">₹300</p>
+        <p class="product-desc">Soothing oil for muscle & joint pain</p>
+        <button class="add-to-cart" onclick="addToCart('Pain Relief Oil', 300)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Herbal Shampoo -->
+  <div class="product-category">
+    <h3>🧴 Herbal Shampoo</h3>
+    <div class="products-grid">
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🧴</div>
+        <h4>Shatritha Shampoo</h4>
+        <p class="product-price">₹300</p>
+        <p class="product-desc">Pure herbal shampoo for hair care</p>
+        <button class="add-to-cart" onclick="addToCart('Shatritha Shampoo', 300)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Herbal Soaps -->
+  <div class="product-category">
+    <h3>🧼 Herbal Soaps</h3>
+    <div class="products-grid">
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🧼</div>
+        <h4>Natural Soap</h4>
+        <p class="product-price">₹300</p>
+        <p class="product-desc">100% natural handmade soap</p>
+        <button class="add-to-cart" onclick="addToCart('Natural Soap', 300)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🧼</div>
+        <h4>Goat Milk Soap</h4>
+        <p class="product-price">₹300</p>
+        <p class="product-desc">Nourishing goat milk soap</p>
+        <button class="add-to-cart" onclick="addToCart('Goat Milk Soap', 300)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🧼</div>
+        <h4>Mulethi Soap</h4>
+        <p class="product-price">₹300</p>
+        <p class="product-desc">Skin brightening mulethi soap</p>
+        <button class="add-to-cart" onclick="addToCart('Mulethi Soap', 300)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🧼</div>
+        <h4>Rice Honey Soap</h4>
+        <p class="product-price">₹300</p>
+        <p class="product-desc">Moisturizing rice & honey soap</p>
+        <button class="add-to-cart" onclick="addToCart('Rice Honey Soap', 300)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🧼</div>
+        <h4>Potato Soap</h4>
+        <p class="product-price">₹300</p>
+        <p class="product-desc">Whitening potato soap</p>
+        <button class="add-to-cart" onclick="addToCart('Potato Soap', 300)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🧼</div>
+        <h4>Strawberry Soap</h4>
+        <p class="product-price">₹200</p>
+        <p class="product-desc">Fresh strawberry scented soap</p>
+        <button class="add-to-cart" onclick="addToCart('Strawberry Soap', 200)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🧼</div>
+        <h4>Multani Soap</h4>
+        <p class="product-price">₹200</p>
+        <p class="product-desc">Clay-based cleansing soap</p>
+        <button class="add-to-cart" onclick="addToCart('Multani Soap', 200)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🧼</div>
+        <h4>Blueberry Soap</h4>
+        <p class="product-price">₹200</p>
+        <p class="product-desc">Antioxidant blueberry soap</p>
+        <button class="add-to-cart" onclick="addToCart('Blueberry Soap', 200)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🧼</div>
+        <h4>Neem Soap</h4>
+        <p class="product-price">₹200</p>
+        <p class="product-desc">Antibacterial neem soap</p>
+        <button class="add-to-cart" onclick="addToCart('Neem Soap', 200)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🧼</div>
+        <h4>Aloe Vera Soap</h4>
+        <p class="product-price">₹200</p>
+        <p class="product-desc">Soothing aloe vera soap</p>
+        <button class="add-to-cart" onclick="addToCart('Aloe Vera Soap', 200)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">🧼</div>
+        <h4>Lemon Soap</h4>
+        <p class="product-price">₹200</p>
+        <p class="product-desc">Refreshing lemon soap</p>
+        <button class="add-to-cart" onclick="addToCart('Lemon Soap', 200)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Wellness Products -->
+  <div class="product-category">
+    <h3>🌱 Wellness Products</h3>
+    <div class="products-grid">
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">💊</div>
+        <h4>Gas Churna</h4>
+        <p class="product-price">₹160</p>
+        <p class="product-desc">Digestive wellness powder</p>
+        <button class="add-to-cart" onclick="addToCart('Gas Churna', 160)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">💊</div>
+        <h4>Dant Manjan</h4>
+        <p class="product-price">₹160</p>
+        <p class="product-desc">Natural toothpaste powder</p>
+        <button class="add-to-cart" onclick="addToCart('Dant Manjan', 160)">Add to Cart</button>
+      </div>
+      <div class="product-card zoom-on-hover">
+        <div class="product-icon">💊</div>
+        <h4>Chat Masala</h4>
+        <p class="product-price">₹160</p>
+        <p class="product-desc">Traditional spice blend</p>
+        <button class="add-to-cart" onclick="addToCart('Chat Masala', 160)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
-
-<div class="contact-info">
-<p>📞 <strong>8804828088</strong></p>
-<p>📍 Shikhar Falls, Dehradun</p>
-</div>
-
-<div class="social-links">
-<a href="https://youtube.com/@yogimanishbhagat" target="_blank">🎥 YouTube</a>
-<a href="https://instagram.com/yogimanishbhagat?igshid=ZDc4ODBmNjlmNQ==" target="_blank">📸 Instagram</a>
-<a href="https://www.facebook.com/manishkumar.bhagat.52?mibextid=ZbWKwL" target="_blank">👍 Facebook</a>
-</div>
-
-<a href="https://wa.me/918804828088" class="btn">
-💬 WhatsApp Booking
-</a>
-<a href="tel:+918804828088" class="btn2">
-☎️ Call Now
-</a>
-
+<!-- Gallery Section -->
+<section id="gallery" class="fade-in-up">
+  <h2>Gallery</h2>
+  <div class="gallery-grid">
+    <img src="file_00000000156c72078d332ea5d9343e46.png" alt="Adiyogi Manish Bhagat" class="gallery-img" onclick="openLightbox(this)">
+    <img src="file_0000000021b0720899053daf4defdba3.png" alt="Massage Service" class="gallery-img" onclick="openLightbox(this)">
+    <img src="file_0000000035e07206a1aabd371d437ed2.png" alt="Massage Service" class="gallery-img" onclick="openLightbox(this)">
+    <img src="file_00000000828c72068e96436910c162eb.png" alt="Nature Trail" class="gallery-img" onclick="openLightbox(this)">
+    <img src="file_000000009d187209b563a905806c0ecc.png" alt="Natural Products" class="gallery-img" onclick="openLightbox(this)">
+    <img src="file_000000009f5471faafc90134dc326c5a.png" alt="Jungle Retreat" class="gallery-img" onclick="openLightbox(this)">
+  </div>
+  
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightboxImage" src="" alt="">
+  </div>
 </section>
 
+<!-- Location Section -->
+<section id="location" class="fade-in-up">
+  <h2>📍 Our Location</h2>
+  
+  <div class="location-container">
+    <!-- Map -->
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3439.7897442789067!2d78.18305!3d30.31456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092e8c0000001d%3A0x1234567890abcdef!2sShikhar%20Falls%2C%20Dehradun!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    <!-- Location Details -->
+    <div class="location-details">
+      <h3>📍 Shikhar Falls, Dehradun</h3>
+      <p>📞 <strong>8804828088</strong></p>
+      <p>Located near the serene Shikhar Falls, providing easy access to nature and wellness.</p>
+      
+      <!-- Live Location Tracking -->
+      <div class="location-tracking">
+        <h4>📍 Live Location Tracking</h4>
+        <p>After booking, you can track my real-time location to know when I'm nearby.</p>
+        <button class="location-btn" onclick="shareLocation()">🗺️ Share Live Location</button>
+      </div>
+      
+      <!-- Get Directions -->
+      <a href="https://maps.google.com/?q=Shikhar+Falls+Dehradun" target="_blank" class="directions-btn">🧭 Get Directions on Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="fade-in-up">
+  <h2>⭐ Client Reviews</h2>
+  
+  <div class="testimonials-grid">
+    <div class="testimonial-card slide-in-up">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>"Amazing massage therapy! Manish is very professional and the nature setting is so peaceful. Highly recommended!"</p>
+      <p class="client-name">- Rajesh Kumar</p>
+    </div>
+    <div class="testimonial-card slide-in-up">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>"Best naturopathy treatment I've ever had. The products are 100% natural and effective. Thank you!"</p>
+      <p class="client-name">- Priya Singh</p>
+    </div>
+    <div class="testimonial-card slide-in-up">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>"The jungle homestay experience was incredible! Nature healing at its best. Will definitely come again!"</p>
+      <p class="client-name">- Ankit Patel</p>
+    </div>
+    <div class="testimonial-card slide-in-up">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>"Manish's herbal products have transformed my skin. Pure quality and great results!"</p>
+      <p class="client-name">- Neha Sharma</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="fade-in-up">
+  <h2>Contact Us</h2>
+  
+  <div class="contact-grid">
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h3>Send us a Message</h3>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Phone" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+    
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <div class="info-item">
+        <span class="info-icon">📞</span>
+        <div>
+          <h4>Phone</h4>
+          <p><a href="tel:+918804828088">+91 8804828088</a></p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">📍</span>
+        <div>
+          <h4>Location</h4>
+          <p>Shikhar Falls, Dehradun</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">⏰</span>
+        <div>
+          <h4>Available Hours</h4>
+          <p>9:00 AM - 6:00 PM Daily</p>
+        </div>
+      </div>
+      <div class="info-item">
+        <span class="info-icon">💬</span>
+        <div>
+          <h4>WhatsApp</h4>
+          <p><a href="https://wa.me/918804828088" target="_blank">Chat on WhatsApp</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Social Links -->
+  <div class="social-links">
+    <h3>Follow Us</h3>
+    <a href="https://youtube.com/@yogimanishbhagat" target="_blank" class="social-btn">🎥 YouTube</a>
+    <a href="https://instagram.com/yogimanishbhagat" target="_blank" class="social-btn">📸 Instagram</a>
+    <a href="https://www.facebook.com/manishkumar.bhagat.52" target="_blank" class="social-btn">👍 Facebook</a>
+  </div>
+</section>
+
+<!-- Footer -->
 <footer>
-<p>📍 Shikhar Falls, Dehradun</p>
-<p>📞 8804828088</p>
-<p>© 2026 Adiyogi Manish Bhagat | Nature Wellness</p>
+  <p>📍 Shikhar Falls, Dehradun | 📞 8804828088</p>
+  <p>© 2026 Adiyogi Manish Bhagat | Nature Wellness</p>
+  <p>All products are 100% natural & handmade</p>
 </footer>
+
+<!-- Back to Top Button -->
+<button id="topBtn" class="top-btn" onclick="topFunction()">⬆</button>
 
 <script src="script.js"></script>
 
@@ -110,12 +470,8 @@ near Shikhar Falls, Dehradun.
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
       navigator.serviceWorker.register("/Adiyogimanishbhagat/service-worker.js")
-        .then(registration => {
-          console.log("✅ Service Worker registered");
-        })
-        .catch(error => {
-          console.log("❌ Service Worker failed:", error);
-        });
+        .then(registration => console.log("✅ Service Worker registered"))
+        .catch(error => console.log("❌ Service Worker failed:", error));
     });
   }
 
