@@ -228,10 +228,13 @@ section {
 }
 
 section h2 {
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
   font-size: 32px;
   margin-bottom: 30px;
   text-align: center;
+  font-weight: bold;
+  display: block !important;
+  visibility: visible !important;
 }
 
 section h3 {
@@ -301,6 +304,17 @@ section h3 {
 /* Products Section */
 .product-category {
   margin: 40px 0;
+  display: block !important;
+}
+
+.product-category h3 {
+  color: var(--primary-color) !important;
+  font-size: 22px;
+  margin-bottom: 20px;
+  padding: 15px 0;
+  border-bottom: 2px solid var(--accent-color);
+  font-weight: bold;
+  display: block !important;
 }
 
 .products-grid {
@@ -317,23 +331,34 @@ section h3 {
   text-align: center;
   transition: var(--transition);
   border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
 }
 
 .product-card:hover {
   border-color: var(--accent-color);
   box-shadow: var(--shadow);
   transform: scale(1.05);
+  background: #fff;
 }
 
 .product-icon {
   font-size: 40px;
   margin-bottom: 10px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 .product-card h4 {
   color: var(--primary-color);
   margin: 10px 0;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .product-price {
@@ -347,6 +372,7 @@ section h3 {
   color: var(--text-light);
   font-size: 14px;
   margin-bottom: 15px;
+  flex-grow: 1;
 }
 
 .add-to-cart {
@@ -358,6 +384,7 @@ section h3 {
   cursor: pointer;
   font-weight: 600;
   transition: var(--transition);
+  margin-top: auto;
 }
 
 .add-to-cart:hover {
