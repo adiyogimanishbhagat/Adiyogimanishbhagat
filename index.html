@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adiyogi Manish Bhagat - Wellness & Nature Guide</title>
+    <style>
+        :root { --primary-color: #2c5e3b; --secondary-color: #f4f7f4; --accent-color: #d4a373; --text-color: #333; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--secondary-color); color: var(--text-color); line-height: 1.6; }
+        header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover; color: white; text-align: center; padding: 60px 20px; }
+        header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .btn-whatsapp { display: inline-block; background-color: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 30px; font-weight: bold; margin-top: 15px; }
+        nav { background-color: var(--primary-color); position: sticky; top: 0; z-index: 1000; text-align: center; }
+        nav a { display: inline-block; color: white; padding: 15px 20px; text-decoration: none; font-weight: 500; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        section { margin-bottom: 50px; }
+        section h2 { text-align: center; color: var(--primary-color); margin-bottom: 30px; }
+        
+        /* About Section Style */
+        .about-content { display: flex; align-items: center; gap: 30px; flex-wrap: wrap; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .about-img { width: 220px; height: 220px; object-fit: cover; border-radius: 50%; border: 4px solid var(--primary-color); margin: 0 auto; }
+        .about-text { flex: 1; min-width: 280px; font-size: 1.05rem; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; padding-bottom: 15px; }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card h3 { margin: 10px 0; font-size: 1.1rem; }
+        .price { font-weight: bold; color: var(--primary-color); margin: 10px 0; }
+        .btn-card { background-color: var(--primary-color); color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; font-size: 0.9rem; }
+        footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+        @media (max-width: 768px) { .about-content { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌿 Adiyogi Manish Bhagat</h1>
+        <p>Massage Therapist | Naturopathy Doctor | Nature Guide</p>
+        <a href="https://wa.me/918804828088" class="btn-whatsapp" target="_blank">🟢 Book on WhatsApp</a>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="images/manish.png" alt="Adiyogi Manish Bhagat" class="about-img" onerror="this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=300&q=80'">
+                <div class="about-text">
+                    <p>Welcome to <strong>Adiyogi Nature Wellness</strong> located near the beautiful Shikhar Falls in Dehradun. We offer professional Massage Therapy, Fire Cupping, and Natural Healing solutions designed to rejuvenate your mind, body, and soul. Apart from healing, we also offer premium Handmade Herbal Products crafted naturally for your wellness.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="services">
+            <h2>💆 Our Services</h2>
+            <div class="grid">
+                <div class="card"><img src="images/full-body-massage.png" onerror="this.src='https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=400&q=80'"><h3>Full Body Massage</h3><div class="price">₹1500</div><a href="https://wa.me/918804828088?text=Book%20Full%20Body%20Massage" class="btn-card">Book Now</a></div>
+                <div class="card"><img src="images/head-massage.png" onerror="this.src='https://images.unsplash.com/photo-1591343395902-1adcb454c2e4?auto=format&fit=crop&w=400&q=80'"><h3>Head Massage</h3><div class="price">₹300</div><a href="https://wa.me/918804828088?text=Book%20Head%20Massage" class="btn-card">Book Now</a></div>
+                <div class="card"><img src="images/foot-massage.png" onerror="this.src='https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=400&q=80'"><h3>Foot Massage</h3><div class="price">₹500</div><a href="https://wa.me/918804828088?text=Book%20Foot%20Massage" class="btn-card">Book Now</a></div>
+                <div class="card"><img src="images/leg-massage.png" onerror="this.src='https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=400&q=80'"><h3>Leg Massage</h3><div class="price">₹800</div><a href="https://wa.me/918804828088?text=Book%20Leg%20Massage" class="btn-card">Book Now</a></div>
+                <div class="card"><img src="images/fire-cupping.png" onerror="this.src='https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=400&q=80'"><h3>Fire Cupping</h3><div class="price">₹1500</div><a href="https://wa.me/918804828088?text=Book%20Fire%20Cupping" class="btn-card">Book Now</a></div>
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>🛍️ Natural Products</h2>
+            <div class="grid">
+                <div class="card"><img src="images/hair-oil.png" onerror="this.src='https://images.unsplash.com/photo-1608248597481-496100c8c836?auto=format&fit=crop&w=400&q=80'"><h3>Herbal Hair Oil</h3><div class="price">₹300</div><a href="https://wa.me/918804828088?text=Order%20Hair%20Oil" class="btn-card">Order Now</a></div>
+                <div class="card"><img src="images/shampoo.png" onerror="this.src='https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=400&q=80'"><h3>Shatritha Shampoo</h3><div class="price">₹300</div><a href="https://wa.me/918804828088?text=Order%20Shatritha%20Shampoo" class="btn-card">Order Now</a></div>
+                <div class="card"><img src="images/face-oil.png" onerror="this.src='https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=400&q=80'"><h3>Face Oil</h3><div class="price">₹800</div><a href="https://wa.me/918804828088?text=Order%20Face%20Oil" class="btn-card">Order Now</a></div>
+                <div class="card"><img src="images/beard-oil.png" onerror="this.src='https://images.unsplash.com/photo-1621607512214-68297480165e?auto=format&fit=crop&w=400&q=80'"><h3>Beard Oil</h3><div class="price">₹500</div><a href="https://wa.me/918804828088?text=Order%20Beard%20Oil" class="btn-card">Order Now</a></div>
+                
+                <div class="card"><img src="images/natural-soap.png" onerror="this.src='https://images.unsplash.com/photo-1607006342456-ba275cd34284?auto=format&fit=crop&w=400&q=80'"><h3>Natural Soap</h3><div class="price">₹300</div><a href="https://wa.me/918804828088?text=Order%20Natural%20Soap" class="btn-card">Order Now</a></div>
+                <div class="card"><img src="images/goat-milk-soap.png" onerror="this.src='https://images.unsplash.com/photo-1546554137-f86b9593a222?auto=format&fit=crop&w=400&q=80'"><h3>Goat Milk Soap</h3><div class="price">₹300</div><a href="https://wa.me/918804828088?text=Order%20Goat%20Milk%20Soap" class="btn-card">Order Now</a></div>
+                <div class="card"><img src="images/mulethi-soap.png" onerror="this.src='https://images.unsplash.com/photo-1515688594390-b649af70d282?auto=format&fit=crop&w=400&q=80'"><h3>Mulethi Soap</h3><div class="price">₹300</div><a href="https://wa.me/918804828088?text=Order%20Mulethi%20Soap" class="btn-card">Order Now</a></div>
+                <div class="card"><img src="images/rice-honey-soap.png" onerror="this.src='https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=400&q=80'"><h3>Rice Honey Soap</h3><div class="price">₹300</div><a href="https://wa.me/918804828088?text=Order%20Rice%20Honey%20Soap" class="btn-card">Order Now</a></div>
+                <div class="card"><img src="images/potato-soap.png" onerror="this.src='https://images.unsplash.com/photo-1595981267035-7b04ca84a82d?auto=format&fit=crop&w=400&q=80'"><h3>Potato Soap</h3><div class="price">₹300</div><a href="https://wa.me/918804828088?text=Order%20Potato%20Soap" class="btn-card">Order Now</a></div>
+                <div class="card"><img src="images/strawberry-soap.png" onerror="this.src='https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=400&q=80'"><h3>Strawberry Soap</h3><div class="price">₹200</div><a href="https://wa.me/918804828088?text=Order%20Strawberry%20Soap" class="btn-card">Order Now</a></div>
+                <div class="card"><img src="images/multani-soap.png" onerror="this.src='https://images.unsplash.com/photo-1532634922-8fe0b757fb13?auto=format&fit=crop&w=400&q=80'"><h3>Multani Soap</h3><div class="price">₹200</div><a href="https://wa.me/918804828088?text=Order%20Multani%20Soap" class="btn-card">Order Now</a></div>
+                <div class="card"><img src="images/blueberry-soap.png" onerror="this.src='https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=400&q=80'"><h3>Blueberry Soap</h3><div class="price">₹200</div><a href="https://wa.me/918804828088?text=Order%20Blueberry%20Soap" class="btn-card">Order Now</a></div>
+                <div class="card"><img src="images/neem-soap.png" onerror="this.src='https://images.unsplash.com/photo-1564419320461-6870880221ad?auto=format&fit=crop&w=400&q=80'"><h3>Neem Soap</h3><div class="price">₹200</div><a href="https://wa.me/918804828088?text=Order%20Neem%20Soap" class="btn-card">Order Now</a></div>
+                <div class="card"><img src="images/aloevera-soap.png" onerror="this.src='https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=400&q=80'"><h3>Aloevera Soap</h3><div class="price">₹200</div><a href="https://wa.me/918804828088?text=Order%20Aloevera%20Soap" class="btn-card">Order Now</a></div>
+                <div class="card"><img src="images/lemon-soap.png" onerror="this.src='https://images.unsplash.com/photo-1590502593747-42a996133562?auto=format&fit=crop&w=400&q=80'"><h3>Lemon Soap</h3><div class="price">₹200</div><a href="https://wa.me/918804828088?text=Order%20Lemon%20Soap" class="btn-card">Order Now</a></div>
+            </div>
+        </section>
+    </div>
+
+    <footer><p>&copy; 2026 Adiyogi Nature Wellness</p></footer>
+
+</body>
+</html>
 
