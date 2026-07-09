@@ -1,0 +1,193 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #2c6e49;
+    --accent-color: #4c9a2a;
+    --card-bg: #f9f9f9;
+    --nav-bg: #ffffff;
+    --campaign-bg: #1a1a2e;
+}
+
+/* Dark Mode (Night Campaign Theme) Variables */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f5f5f5;
+    --primary-color: #81b29a;
+    --accent-color: #f2cc8f;
+    --card-bg: #1e1e1e;
+    --nav-bg: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Campaign Banner */
+.campaign-banner {
+    background: linear-gradient(45deg, #0f0c20, #15102a);
+    color: #f2cc8f;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--nav-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin: 0 15px;
+    font-weight: 600;
+}
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.theme-btn, .cart-icon {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--text-color);
+    cursor: pointer;
+    position: relative;
+}
+#cartCount {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1500&q=80') center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+.hero-content h1 { font-size: 48px; margin-bottom: 15px; }
+.hero-content p { font-size: 18px; max-width: 600px; margin-bottom: 25px; }
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+}
+
+/* Products */
+.products-section { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+.section-title { text-align: center; margin-bottom: 40px; font-size: 32px; }
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative;
+}
+.product-img {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.product-info h3 { font-size: 18px; margin-bottom: 10px; }
+.price { font-weight: 700; color: var(--accent-color); font-size: 20px; margin-bottom: 15px; }
+.add-to-cart-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+.highlight-card { border: 2px solid #f2cc8f; }
+.badge {
+    position: absolute; top: 10px; left: 10px; background: #f2cc8f; color: #111;
+    padding: 3px 10px; font-size: 12px; font-weight: bold; border-radius: 3px;
+}
+
+/* Night Campaign Section */
+.night-campaign-section {
+    background: linear-gradient(135deg, #0f0c20 0%, #15102a 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+.campaign-container { max-width: 800px; margin: 0 auto; }
+.countdown-timer { display: flex; justify-content: center; gap: 20px; margin: 30px 0; }
+.countdown-timer div { background: rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 10px; min-width: 90px;}
+.countdown-timer span { font-size: 32px; font-weight: bold; display: block; }
+
+/* Cart Drawer */
+.cart-drawer {
+    position: fixed; top: 0; right: -350px; width: 350px; height: 100%;
+    background: var(--nav-bg); box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    z-index: 2000; display: flex; flex-direction: column; transition: 0.3s;
+}
+.cart-drawer.open { right: 0; }
+.cart-header { padding: 20px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+.close-cart { font-size: 28px; background: none; border: none; cursor: pointer; color: var(--text-color); }
+.cart-items { padding: 20px; flex-grow: 1; overflow-y: auto; }
+.cart-footer { padding: 20px; border-top: 1px solid #ddd; }
+.checkout-btn { width: 100%; background: var(--accent-color); color: white; border: none; padding: 12px; cursor: pointer; font-size: 16px; border-radius: 5px; }
+
+/* Footer */
+footer { background: #111; color: white; padding: 30px 20px; text-align: center; margin-top: 60px; }
+.socials a { color: white; margin: 0 10px; font-size: 20px; }
