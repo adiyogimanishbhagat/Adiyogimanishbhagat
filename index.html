@@ -393,3 +393,87 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Campaign</title>
+    <style>
+        /* Global Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0b0c10; /* Dark Background */
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Campaign Banner Container */
+        .night-campaign-banner {
+            position: relative;
+            max-width: 1200px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 242, 254, 0.2); /* Neon/Glow Effect */
+            background: linear-gradient(135px, #0f2027, #203a43, #2c5364); /* Fallback Background */
+        }
+
+        /* The Image */
+        .night-campaign-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            filter: brightness(80%); /* Image ko thoda dark night vibe dene ke liye */
+            transition: transform 0.5s ease;
+        }
+
+        /* Image hover effect */
+        .night-campaign-banner:hover img {
+            transform: scale(1.03); /* Hover karne par halka sa zoom */
+        }
+
+        /* Overlay Text & Button (Optional: Agar image ke upar text likhna ho) */
+        .banner-content {
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            color: #ffffff;
+            z-index: 2;
+        }
+
+        .banner-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45px, #00f2fe, #4facfe); /* Glowing Blue Button */
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .banner-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 242, 254, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NIGHT CAMPAIGN BANNER START -->
+    <div class="night-campaign-banner">
+        <!-- Yahan apni night picture ka link daalein -->
+        <img src="https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=1200&q=80" alt="Special Night Campaign">
+        
+        <!-- Agar image ke upar button chahiye to ise rani dein, nahi to delete kar dein -->
+        <div class="banner-content">
+            <a href="#shop-now" class="banner-btn">Shop Night Deals Only</a>
+        </div>
+    </div>
+    <!-- NIGHT CAMPAIGN BANNER END -->
+
+</body>
+</html>
