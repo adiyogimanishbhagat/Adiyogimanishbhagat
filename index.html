@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuraCare | Premium Wellness & Beauty</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome Icons ke liye -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Top Banner for Night Campaign -->
+    <div class="campaign-banner" id="campaignBanner">
+        <p><i class="fas fa-moon"></i> <strong>Midnight Flash Sale!</strong> Get 30% OFF on all Women Massage & Oils. Use Code: <strong>NIGHT30</strong></p>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo"><i class="fas fa-leaf"></i> AuraCare</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#campaign">Night Campaign</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button id="themeToggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Organic Care For Your Body & Soul</h1>
+            <p>Explore our premium range of natural soaps, herbal shampoos, therapeutic oils, and exclusive women's massage therapies.</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <h2 class="section-title">Our Premium Collection</h2>
+        <div class="products-grid">
+            
+            <!-- Product 1: Oil -->
+            <div class="product-card" data-category="oil">
+                <div class="product-img">
+                    <i class="fas fa-oil-can"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Bhringraj Hair Growth Oil</h3>
+                    <p class="price">₹499</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Bhringraj Hair Growth Oil', 499)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2: Shampoo -->
+            <div class="product-card" data-category="shampoo">
+                <div class="product-img">
+                    <i class="fas fa-pump-soap"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Onion & Keratin Shampoo</h3>
+                    <p class="price">₹349</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Onion & Keratin Shampoo', 349)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3: Massage -->
+            <div class="product-card" data-category="massage">
+                <div class="product-img">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Therapeutic Body Massage Kit</h3>
+                    <p class="price">₹899</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Therapeutic Body Massage Kit', 899)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4: Women Massage -->
+            <div class="product-card highlight-card" data-category="women-massage">
+                <div class="badge">Best Seller</div>
+                <div class="product-img">
+                    <i class="fas fa-hot-tub"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Aromatherapy Women's Massage Oil</h3>
+                    <p class="price">₹1,249</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Aromatherapy Women\'s Massage Oil', 1249)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 5: Soaps -->
+            <div class="product-card" data-category="soaps">
+                <div class="product-img">
+                    <i class="fas fa-soap"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Handmade Charcoal & Honey Soap</h3>
+                    <p class="price">₹199</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Handmade Charcoal & Honey Soap', 199)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 6: Everything Else (Combo) -->
+            <div class="product-card" data-category="combo">
+                <div class="product-img">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <div class="product-info">
+                    <h3>Luxury All-in-One Wellness Box</h3>
+                    <p class="price">₹2,499</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Luxury All-in-One Wellness Box', 2499)">Add to Cart</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Night Campaign Section -->
+    <section class="night-campaign-section" id="campaign">
+        <div class="campaign-container">
+            <div class="campaign-text">
+                <h2><i class="fas fa-star-and-crescent"></i> Midnight Rituals</h2>
+                <p>An exclusive nighttime self-care routine designed for modern women. Unwind with our special lavender-infused massage oils and relaxing body cleansers before bed.</p>
+                <div class="countdown-timer">
+                    <div><span id="hours">02</span><small>Hours</small></div>
+                    <div><span id="mins">45</span><small>Mins</small></div>
+                    <div><span id="secs">30</span><small>Secs</small></div>
+                </div>
+                <a href="#products" class="btn btn-dark">Unlock Night Deals</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Side Cart Drawer -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Items JS se add honge -->
+            <p class="empty-msg">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">Total: <span id="cartTotal">₹0</span></div>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 AuraCare India. All Rights Reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
