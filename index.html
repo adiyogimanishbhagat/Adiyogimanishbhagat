@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌿 Nature Wellness Resort & Spa</title>
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Alpine.js for interactive tabs, cart, and modals -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .jungle-gradient { background: linear-gradient(135deg, #064e3b 0%, #022c22 100%); }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased" x-data="{ cartCount: 0 }">
+
+    <!-- 🌟 TOP NAVIGATION BAR -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-200 px-6 py-4 flex justify-between items-center shadow-xs">
+        <a href="#" class="text-xl font-bold text-emerald-900 tracking-wide flex items-center gap-2">
+            <span>🌿</span> Nature Wellness
+        </a>
+        <div class="flex items-center gap-4">
+            <a href="https://wa.me/918804828088?text=Hi!%20I%20want%20to%20book%20a%20stay/service." target="_blank" class="bg-emerald-700 text-white text-xs font-semibold px-4 py-2 rounded-full hover:bg-emerald-800 transition">
+                Book Now
+            </a>
+            <div class="relative cursor-pointer" @click="alert('Cart functionality coming soon!')">
+                <span class="text-xl">🛍️</span>
+                <span class="absolute -top-2 -right-2 bg-amber-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full" x-text="cartCount"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🌊 HERO SECTION -->
+    <header class="jungle-gradient text-white relative py-24 px-6 text-center overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div class="absolute top-10 left-10 w-32 h-32 rounded-full bg-white filter blur-xl"></div>
+            <div class="absolute bottom-10 right-10 w-48 h-48 rounded-full bg-emerald-400 filter blur-2xl"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <span class="text-xs uppercase tracking-widest text-emerald-300 font-semibold bg-emerald-950/50 px-3 py-1 rounded-full">Pure Nature. Pure Healing.</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mt-4 mb-6 leading-tight text-stone-100">Rejuvenate Your Soul in the Lap of Nature</h1>
+            <p class="text-md md:text-xl text-stone-300 mb-8 max-w-2xl mx-auto font-light">Experience luxury eco-stays, expert naturopathy treatments, and authentic organic therapies right next to pristine waterfalls.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#stay" class="bg-amber-500 hover:bg-amber-600 text-stone-950 font-bold px-8 py-3.5 rounded-full shadow-md transition transform hover:-translate-y-0.5">🏕️ Explore Homestays</a>
+                <a href="#services" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-3.5 rounded-full backdrop-blur-xs transition">💆 View Treatments</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 📍 QUICK INFO GRID -->
+    <section class="max-w-6xl mx-auto -mt-8 px-4 grid grid-cols-2 md:grid-cols-4 gap-4 relative z-20">
+        <div class="bg-white p-4 rounded-2xl shadow-md text-center border border-stone-100">
+            <span class="text-2xl">📅</span>
+            <h4 class="font-bold text-sm mt-1">Easy Booking</h4>
+            <p class="text-xs text-stone-500">24/7 Instant Confirmation</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow-md text-center border border-stone-100">
+            <span class="text-2xl">🌿</span>
+            <h4 class="font-bold text-sm mt-1">100% Organic</h4>
+            <p class="text-xs text-stone-500">Pure Herbal Care</p>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow-md text-center border border-stone-100">
+            <a href="https://maps.google.com" target="_blank">
+                <span class="text-2xl">📍</span>
+                <h4 class="font-bold text-sm mt-1 text-emerald-800 underline">Jungle Location</h4>
+                <p class="text-xs text-stone-500">Click to Open Maps</p>
+            </a>
+        </div>
+        <div class="bg-white p-4 rounded-2xl shadow-md text-center border border-stone-100">
+            <span class="text-2xl">⭐</span>
+            <h4 class="font-bold text-sm mt-1">4.9/5 Rating</h4>
+            <p class="text-xs text-stone-500">From 500+ Happy Guests</p>
+        </div>
+    </section>
+
+    <!-- 🏕️ SECTION 1: HOMESTAY -->
+    <section id="stay" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-stone-900">Luxury Nature Eco-Stays</h2>
+            <p class="text-stone-600 mt-2 max-w-lg mx-auto">Wake up to the soothing sound of flowing waterfalls.</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- Cottage 1 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xs border border-stone-200 flex flex-col justify-between">
+                <div class="h-64 bg-stone-300 relative flex items-center justify-center text-stone-500 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1587061949409-02df41d5e562?auto=format&fit=crop&w=800&q=80')">
+                    <span class="absolute top-4 left-4 bg-emerald-900/80 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-xs">Waterfall View</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-stone-900 mb-2">Jungle View Luxury Cottage</h3>
+                        <p class="text-stone-600 text-sm mb-4">Premium wooden cottage equipped with modern amenities and a stunning view of the valley trail.</p>
+                    </div>
+                    <div class="flex justify-between items-center border-t border-stone-100 pt-4">
+                        <div>
+                            <span class="text-2xl font-bold text-emerald-800">₹3,500</span>
+                            <span class="text-xs text-stone-500">/ night</span>
+                        </div>
+                        <a href="https://wa.me/918804828088?text=I%20want%20to%20book%20the%20Jungle%20View%20Cottage" target="_blank" class="bg-emerald-800 hover:bg-emerald-950 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition">
+                            Book Cottage
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cottage 2 -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-xs border border-stone-200 flex flex-col justify-between">
+                <div class="h-64 bg-stone-300 relative flex items-center justify-center text-stone-500 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1546548970-71785318a17b?auto=format&fit=crop&w=800&q=80')">
+                    <span class="absolute top-4 left-4 bg-amber-600/80 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-xs">Nature Trail Access</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-stone-900 mb-2">Stream-Side Bamboo Villa</h3>
+                        <p class="text-stone-600 text-sm mb-4">An authentic eco-friendly villa built with natural bamboo, situated right next to the stream.</p>
+                    </div>
+                    <div class="flex justify-between items-center border-t border-stone-100 pt-4">
+                        <div>
+                            <span class="text-2xl font-bold text-emerald-800">₹4,800</span>
+                            <span class="text-xs text-stone-500">/ night</span>
+                        </div>
+                        <a href="https://wa.me/918804828088?text=I%20want%20to%20book%20the%20Bamboo%20Villa" target="_blank" class="bg-emerald-800 hover:bg-emerald-950 text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition">
+                            Book Villa
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💆 SECTION 2: TREATMENTS -->
+    <section id="services" class="bg-emerald-950 text-white py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-stone-100">Holistic Healing & Massages</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-emerald-900/50 border border-emerald-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Ayurvedic Massage</h3>
+                        <p class="text-sm text-emerald-200/70 mb-6">Traditional full-body rubdown using warm medicated herbal oils.</p>
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-emerald-800">
+                        <span class="text-xl font-bold text-amber-400">₹1,500</span>
+                        <a href="https://wa.me/918804828088?text=I%20want%20to%20book%20an%20Ayurvedic%20Massage" class="text-xs bg-white text-emerald-950 font-bold px-4 py-2 rounded-lg hover:bg-stone-200 transition">Book Slot</a>
+                    </div>
+                </div>
+
+                <div class="bg-emerald-900/50 border border-emerald-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Naturopathy Mud Therapy</h3>
+                        <p class="text-sm text-emerald-200/70 mb-6">Detoxifying mud pack treatment enriched with natural minerals.</p>
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-emerald-800">
+                        <span class="text-xl font-bold text-amber-400">₹1,200</span>
+                        <a href="https://wa.me/918804828088?text=I%20want%20to%20book%20a%20Mud%20Therapy" class="text-xs bg-white text-emerald-950 font-bold px-4 py-2 rounded-lg hover:bg-stone-200 transition">Book Slot</a>
+                    </div>
+                </div>
+
+                <div class="bg-emerald-900/50 border border-emerald-800 p-6 rounded-2xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Yoga & Detox Package</h3>
+                        <p class="text-sm text-emerald-200/70 mb-6">Combination of sunrise meditation and cleansing herbal diet session.</p>
+                    </div>
+                    <div class="flex justify-between items-center pt-4 border-t border-emerald-800">
+                        <span class="text-xl font-bold text-amber-400">₹2,200</span>
+                        <a href="https://wa.me/918804828088?text=I%20want%20to%20book%20a%20Complete%20Detox%20Package" class="text-xs bg-white text-emerald-950 font-bold px-4 py-2 rounded-lg hover:bg-stone-200 transition">Book Slot</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🛍️ SECTION 3: PRODUCTS -->
+    <section id="products" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-stone-900">Organic Herbal Products</h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-white p-4 rounded-2xl shadow-xs border border-stone-200 flex flex-col justify-between">
+                <div class="h-40 bg-stone-100 rounded-xl mb-4 flex items-center justify-center text-3xl">🧴</div>
+                <h4 class="font-bold text-sm text-stone-900">Organic Aloe Vera Gel</h4>
+                <div class="flex justify-between items-center mt-4 pt-2 border-t border-stone-100">
+                    <span class="font-bold text-emerald-800 text-sm">₹250</span>
+                    <button @click="cartCount++" class="bg-amber-500 text-stone-950 text-xs font-bold px-2.5 py-1.5 rounded-lg hover:bg-amber-600 transition">+ Add</button>
+                </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-2xl shadow-xs border border-stone-200 flex flex-col justify-between">
+                <div class="h-40 bg-stone-100 rounded-xl mb-4 flex items-center justify-center text-3xl">🧪</div>
+                <h4 class="font-bold text-sm text-stone-900">Wild Forest Honey</h4>
+                <div class="flex justify-between items-center mt-4 pt-2 border-t border-stone-100">
+                    <span class="font-bold text-emerald-800 text-sm">₹450</span>
+                    <button @click="cartCount++" class="bg-amber-500 text-stone-950 text-xs font-bold px-2.5 py-1.5 rounded-lg hover:bg-amber-600 transition">+ Add</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📱 FOOTER -->
+    <footer class="bg-stone-900 text-stone-400 text-center py-8 text-xs">
+        <p>© 2026 Nature Wellness Resort. All rights reserved.</p>
+    </footer>
+
+    <!-- AI CHATBOT INTEGRATION PLACEHOLDER -->
+
+</body>
+</html>
