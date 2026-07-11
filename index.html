@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adiyogi Manish Bhagat - Wellness & Nature Guide</title>
+    <style>
+        :root {
+            --primary: #2d6a4f;
+            --secondary: #40916c;
+            --light: #f4f9f4;
+            --dark: #1b4332;
+            --text: #2d3748;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--light); color: var(--text); line-height: 1.6; }
+        header { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80') center/cover; color: white; text-align: center; padding: 100px 20px; }
+        .nav-links { display: flex; justify-content: center; gap: 15px; background: var(--dark); padding: 15px; flex-wrap: wrap; position: sticky; top: 0; z-index: 1000; }
+        .nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 5px 10px; transition: 0.3s; }
+        .nav-links a:hover { color: #b7e4c7; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        h2 { text-align: center; color: var(--dark); margin: 40px 0 20px; font-size: 2rem; position: relative; padding-bottom: 10px; }
+        h2::after { content: ''; width: 50px; height: 3px; background: var(--secondary); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
+        .card { background: white; border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border-top: 5px solid var(--secondary); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .price { font-size: 1.5rem; color: var(--primary); font-weight: bold; margin: 15px 0; }
+        .btn { display: inline-block; background: var(--primary); color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; transition: 0.3s; border: none; cursor: pointer; margin-top: 10px; }
+        .btn:hover { background: var(--dark); transform: scale(1.05); }
+        .btn-live { background: #d90429; animation: pulse 2s infinite; }
+        .btn-live:hover { background: #b3001b; }
+        .btn-whatsapp { background: #25D366; }
+        .btn-whatsapp:hover { background: #128C7E; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); box-shadow: 0 0 15px rgba(217,4,41,0.6); } 100% { transform: scale(1); } }
+        .about-section { background: white; padding: 40px; border-radius: 12px; margin-top: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .contact-info { background: var(--dark); color: white; padding: 40px; border-radius: 12px; text-align: center; margin-top: 40px; }
+        .contact-info a { color: #b7e4c7; }
+        footer { text-align: center; padding: 20px; margin-top: 40px; background: #e9ecef; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🌿 Adiyogi Manish Bhagat</h1>
+        <p>Massage Therapist | Naturopathy Doctor | Nature Guide</p>
+        <p style="margin-top: 15px; font-weight: bold; color: #b7e4c7;">🏡 Home Visit Available | Special Therapies for Men & Women</p>
+    </header>
+
+    <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#camping">Camping & Wellness</a>
+        <a href="#services">General Services</a>
+        <a href="#womens-special">Women's Special</a>
+        <a href="#products">Oils & Churna</a>
+        <a href="#soaps">Handmade Soaps</a>
+        <a href="#contact">Contact & Live Track</a>
+    </div>
+
+    <div class="container">
+        
+        <!-- Live Track & Action Buttons at top for quick access -->
+        <div style="text-align: center; margin-bottom: 40px; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+            <h3 style="color: var(--dark); margin-bottom: 15px; font-size: 1.4rem;">📍 Real-Time Patient Tracking</h3>
+            <p style="margin-bottom: 15px; color: #555;">क्या मैं आपके क्षेत्र के आसपास हूँ? नीचे बटन पर क्लिक करके मेरी लाइव लोकेशन अभी ट्रैक करें!</p>
+            <a href="https://maps.app.goo.gl/Tv56LTyDZo1GTmgf9" target="_blank" class="btn btn-live">📡 Check If I Am Near You (Track Me)</a>
+            <div style="margin-top: 15px;">
+                <a href="https://wa.me/918804828088" target="_blank" class="btn btn-whatsapp">💬 Book on WhatsApp</a>
+            </div>
+        </div>
+
+        <!-- Section: Camping & Wellness -->
+        <section id="camping">
+            <h2>⛺ Shikhar Falls Nature Night Camping & Wellness</h2>
+            <div class="about-section" style="text-align: center;">
+                <p style="font-size: 1.2rem; font-weight: bold; color: var(--primary); margin-bottom: 15px;">प्रकृति की गोद में तनाव मुक्त होने का अनोखा अनुभव। सुंदर झरनों के बीच रात को कैंपिंग का आनंद लें और साथ ही नेचुरल थेरेपी से शरीर को रीचार्ज करें।</p>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Home Visit Service</h3>
+                        <p>आपके घर पर आकर प्रोफेशनल थेरेपी (Fire Cupping & Pain Management)।</p>
+                    </div>
+                    <div class="card">
+                        <h3>Women's Special</h3>
+                        <p>महिलाओं के लिए सुरक्षित लेडी-टू-लेडी फुल बॉडी मसाज सुविधा।</p>
+                    </div>
+                    <div class="card">
+                        <h3>Night Camping</h3>
+                        <p>शिखर फॉल्स, देहरादून के पास प्रकृति के बीच नाइट कैंपिंग और एडवेंचर ट्रेल्स।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: About Me -->
+        <section id="about" class="about-section">
+            <h2>About Me</h2>
+            <p style="margin-top: 15px;">Welcome to <strong>Adiyogi Nature Wellness</strong> located near the beautiful Shikhar Falls in Dehradun. We offer professional Massage Therapy, Fire Cupping, and Natural Healing solutions designed to rejuvenate your mind, body, and soul. Apart from healing, we also offer peaceful Jungle Homestay accommodations, guided Nature Trails, and premium Handmade Herbal Products crafted naturally for your wellness.</p>
+            <p style="margin-top: 15px; background: #fff3cd; padding: 15px; border-left: 5px solid #ffc107; border-radius: 4px;">
+                📢 <strong>Home Visit Service available!</strong> For women patients, Head, Hand, Feet and Chronic Pain management therapy is carefully done by Adiyogi Manish Bhagat. For Full Body Massage, we have a dedicated expert Lady Therapist (Lady-to-Lady Facility) ensuring 100% comfort and privacy.
+            </p>
+        </section>
+
+        <!-- Section: General Services -->
+        <section id="services">
+            <h2>💆 Our General Services (Home Visit Available)</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Full Body Massage (Men)</h3>
+                    <p>Complete relaxation and stress relief therapy done by Manish Bhagat.</p>
+                    <div class="price">₹1500</div>
+                    <a href="https://wa.me/918804828088?text=I%20want%20to%20book%20Full%20Body%20Massage%20Men" class="btn">Book Now</a>
+                </div>
+                <div class="card">
+                    <h3>Fire Cupping Therapy</h3>
+                    <p>Deep muscle relaxation & pain relief detox therapy by Manish Bhagat.</p>
+                    <div class="price">₹1500</div>
+                    <a href="https://wa.me/918804828088?text=I%20want%20to%20book%20Fire%20Cupping%20Therapy" class="btn">Book Now</a>
+                </div>
+                <div class="card">
+                    <h3>Leg & Foot Massage</h3>
+                    <p>Traditional reflexology great for running, trekking fatigue and elderly pain.</p>
+                    <div class="price">₹800</div>
+                    <a href="https://wa.me/918804828088?text=I%20want%20to%20book%20Leg%20Massage" class="btn">Book Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Women's Special Services -->
+        <section id="womens-special">
+            <h2>👩 Women's Special Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Head, Hand & Foot Massage</h3>
+                    <p><strong>Therapist:</strong> Done by Adiyogi Manish Bhagat. Effective relief from stress and physical fatigue.</p>
+                    <div class="price">₹700</div>
+                    <a href="https://wa.me/918804828088?text=I%20want%20to%20book%20Head%20and%20Feet%20Massage" class="btn">Book Session</a>
+                </div>
+                <div class="card">
+                    <h3>Chronic Pain Management</h3>
+                    <p><strong>Therapist:</strong> Done by Adiyogi Manish Bhagat. Scientific & Ayurvedic healing for back, knee, joint pain, or migraines.</p>
+                    <div class="price">₹1000 onwards</div>
+                    <a href="https://wa.me/918804828088?text=I%20want%20to%20book%20Chronic%20Pain%20Management" class="btn">Book Pain Relief</a>
+                </div>
+                <div class="card">
+                    <h3>Full Body Massage (Lady-to-Lady)</h3>
+                    <p><strong>Therapist:</strong> Certified Professional Lady Therapist. 100% comfortable, private & secure therapy at your home.</p>
+                    <div class="price">₹1500</div>
+                    <a href="https://wa.me/918804828088?text=I%20want%20to%20book%20Full%20Body%20Massage%20for%20Women" class="btn">Book Lady Therapist</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Herbal Products -->
+        <section id="products">
+            <h2>🛍️ Herbal Oils, Churna & Spices</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🦷 Herbal Dant Manjan</h3>
+                    <p>Natural Teeth Whitening, cavity defence & strong Gum Care.</p>
+                    <div class="price">₹100</div>
+                    <a href="https://wa.me/918804828088?text=I%20want%20to%20order%20Herbal%20Dant%20Manjan" class="btn">Order Now</a>
+                </div>
+                <div class="card">
+                    <h3>🌶️ Pure Chat Masala</h3>
+                    <p>100% Homemade, Organic & Delicious spicy tangy blends. <em>Swad bhi, Sehat bhi!</em></p>
+                    <div class="price">₹150</div>
+                    <a href="https://wa.me/918804828088?text=I%20want%20to%20order%20Pure%20Chat%20Masala" class="btn">Order Now</a>
+                </div>
+                <div class="card">
+                    <h3>🍂 Ayurvedic Gas Churna</h3>
+                    <p>Instant relief from bloating, severe acidity & digestion issues.</p>
+                    <div class="price">₹200</div>
+                    <a href="https://wa.me/918804828088?text=I%20want%20to%20order%20Ayurvedic%20Gas%20Churna" class="btn">Order Now</a>
+                </div>
+                <div class="card">
+                    <h3>🧴 Joints Pain Oil</h3>
+                    <p>Deep penetrating herbal oil for Knee, Back & severe Joint pain.</p>
+                    <div class="price">₹400</div>
+                    <a href="https://wa.me/918804828088?text=I%20want%20to%20order%20Joints%20Pain%20Oil" class="btn">Order Now</a>
+                </div>
+                <div class="card">
+                    <h3>🌿 Herbal Hair Oil</h3>
+                    <p>Pure traditional formula for anti-dandruff & hair growth nourishment.</p>
+                    <div class="price">₹300</div>
+                    <a href="https://wa.me/918804828088?text=I%20want%20to%20order%20Herbal%20Hair%20Oil" class="btn">Order Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Handmade Soaps -->
+        <section id="soaps">
+            <h2>🧼 Adiyogi Handmade Soaps & Shampoo</h2>
+            <div class="grid">
+                <div class="card"><h3>🌿 Herbal Shatritha Shampoo</h3><p>Natural hair care to reduce hair fall.</p><div class="price">₹300</div></div>
+                <div class="card"><h3>🧼 Adiyogi Natural Soap</h3><p>100% pure organic handmade bathing bar.</p><div class="price">₹300</div></div>
+                <div class="card"><h3>🐐 Goat Milk Soap</h3><p>Deep moisturizing skin formula for glowing look.</p><div class="price">₹300</div></div>
+                <div class="card"><h3>🪵 Mulethi Soap</h3><p>Traditional brightening soap to cure dark spots.</p><div class="price">₹300</div></div>
+                <div class="card"><h3>🍯 Rice Honey Soap</h3><p>Gentle exfoliation with natural honey shine.</p><div class="price">₹300</div></div>
+                <div class="card"><h3>🍓 Strawberry Soap</h3><p>Fruity freshness bar with rich antioxidants.</p><div class="price">₹200</div></div>
+                <div class="card"><h3>🧱 Multani Soap</h3><p>Deep cooling pore cleansing for oily skin.</p><div class="price">₹200</div></div>
+                <div class="card"><h3>🫐 Blueberry Soap</h3><p>Premium formula for ageless, glowing texture.</p><div class="price">₹200</div></div>
+                <div class="card"><h3>🌿 Neem Soap</h3><p>Anti-bacterial protection to remove acne.</p><div class="price">₹200</div></div>
+                <div class="card"><h3>🌱 Aloevera Soap</h3><p>Soothing hydration bar to heal sunburn.</p><div class="price">₹200</div></div>
+                <div class="card"><h3>🍋 Lemon Soap</h3><p>Citrus extract formula for refreshing bath.</p><div class="price">₹200</div></div>
+                <div class="card"><h3>🥔 Potato Soap</h3><p>Natural pigmentation remover for blemishes.</p><div class="price">₹300</div></div>
+            </div>
+        </section>
+
+        <!-- Section: Contact & Live Location -->
+        <section id="contact" class="contact-info">
+            <h2>Contact Us & Booking</h2>
+            <p style="font-size: 1.2rem; margin: 15px 0;">👤 <strong>Adiyogi Manish Bhagat</strong></p>
+            <p>📱 <strong>Phone / WhatsApp:</strong> <a href="tel:+918804828088">+91 8804828088</a></p>
+            <p>📧 <strong>Email:</strong> adiyogimanishbhagat@gmail.com</p>
+            <p>📍 <strong>Location:</strong> Shikhar Falls, Dehradun, Uttarakhand, India</p>
+            
+            <div style="margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 8px;">
+                <h3 style="margin-bottom: 10px;">🛰️ Patient Live Track</h3>
+                <p style="margin-bottom: 15px; font-size: 0.9rem;">नीचे दिए गए बटन पर क्लिक करके मेरी रीयल-टाइम लोकेशन मैप पर देखें:</p>
+                <a href="https://maps.app.goo.gl/Tv56LTyDZo1GTmgf9" target="_blank" class="btn btn-live">📡 Check If I Am Near You (Track Me)</a>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <a href="https://maps.google.com/?q=Shikhar+Falls+Dehradun" target="_blank" class="btn">🗺️ Open Google Maps Location</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Adiyogi Nature Wellness. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
