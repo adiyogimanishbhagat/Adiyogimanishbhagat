@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience Panchakarma, Fire Cupping, Naturopathy, and premium organic products under the guidance of Adiyogi Manish Bhagat. Book your premium wellness appointment today.">
+    <meta name="keywords" content="Adiyogi Manish Bhagat, Panchakarma, Fire Cupping, Naturopathy, Herbal Products, Wellness Center, Massage Therapy">
+    <meta name="author" content="Adiyogi Manish Bhagat">
+    <title>Adiyogi Manish Bhagat | Premium Wellness & Naturopathy</title>
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1b4332">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="assets/icon-192.png">
+
+    <!-- Stylesheets & Fonts -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Premium Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-accent">Adiyogi</span> Manish Bhagat
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
+                <li><button id="dark-mode-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button></li>
+                <li><button id="pwa-install-btn" class="btn-install" style="display: none;"><i class="fas fa-download"></i> Install App</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Full-Screen Hero Section with Animated Background -->
+    <header id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content scroll-reveal">
+            <span class="hero-subtitle">Premium Naturopathy & Wellness</span>
+            <h1>Harmonize Your Body, <br><span class="text-gold">Align Your Soul</span></h1>
+            <p>Step into a sanctuary of healing designed on the timeless principles of nature, curated meticulously by Adiyogi Manish Bhagat.</p>
+            <div class="hero-buttons">
+                <a href="#appointment" class="btn-premium btn-gold-fill"><i class="fas fa-calendar-alt"></i> Book Appointment</a>
+                <a href="tel:+91XXXXXXXXXX" class="btn-premium btn-outline"><i class="fas fa-phone-alt"></i> Call Now</a>
+            </div>
+        </div>
+        <!-- Animated Wave SVG Divider -->
+        <div class="wave-container">
+            <svg viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" /></defs>
+                <g class="parallax">
+                    <use href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                    <use href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use href="#gentle-wave" x="48" y="7" fill="#fff" class="wave-bottom" />
+                </g>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Services Section (Glassmorphism Cards) -->
+    <section id="services" class="services-section section-padding">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Our Sacred Services</h2>
+                <p>Curative therapies tailored beautifully to balance your body's vital bio-elements.</p>
+            </div>
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card glass-card scroll-reveal">
+                    <div class="service-icon"><i class="fas fa-spa"></i></div>
+                    <h3>Panchakarma Therapy</h3>
+                    <p>An elite, five-step detoxification process designed to purify tissues and deeply restore natural cellular vitality.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card glass-card scroll-reveal">
+                    <div class="service-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Fire Cupping Therapy</h3>
+                    <p>Ancient thermotherapy technique utilizing vacuum suction to optimize localized circulation and release deep muscle toxins.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card glass-card scroll-reveal">
+                    <div class="service-icon"><i class="fas fa-hands"></i></div>
+                    <h3>Full Body Massage</h3>
+                    <p>Symphonic full-body strokes using customized luxury herbal formulations to melt away tension and restore bliss.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card glass-card scroll-reveal">
+                    <div class="service-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Head Massage</h3>
+                    <p>Focused cranial therapy that calms the nervous system, alleviates mental exhaustion, and triggers deep clarity.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card glass-card scroll-reveal">
+                    <div class="service-icon"><i class="fas fa-shoe-prints"></i></div>
+                    <h3>Foot Massage</h3>
+                    <p>Reflexology based stimulation points targeting structural wellness throughout the entire anatomical system.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="service-card glass-card scroll-reveal">
+                    <div class="service-icon"><i class="fas fa-tree"></i></div>
+                    <h3>Nature Trail</h3>
+                    <p>Curated forest immersion trails engineered to reset circadian rhythms and absorb refreshing natural negative ions.</p>
+                </div>
+                <!-- Service 7 -->
+                <div class="service-card glass-card scroll-reveal">
+                    <div class="service-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Naturopathy Consultation</h3>
+                    <p>Strategic, personalized diet and lifestyle pathways tailored explicitly for long-term holistic vital balance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section with Dynamic Filters & Search -->
+    <section id="products" class="products-section section-padding">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Premium Apothecary</h2>
+                <p>Pure, ethically harvested, wildcrafted formulas created for exceptional daily self-care.</p>
+            </div>
+
+            <!-- Search and Filter Panel -->
+            <div class="filter-wrapper scroll-reveal">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="product-search" placeholder="Search our premium range...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="wellness">Wellness</button>
+                    <button class="filter-btn" data-filter="cosmetics">Cosmetics</button>
+                    <button class="filter-btn" data-filter="digestive">Digestive</button>
+                </div>
+            </div>
+
+            <div class="products-grid" id="products-container">
+                <!-- Product 1 -->
+                <div class="product-card glass-card scroll-reveal" data-category="cosmetics">
+                    <img data-src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=400&q=80" src="placeholder.jpg" alt="Herbal Soaps" class="lazy-image">
+                    <div class="product-info">
+                        <h3>Herbal Soaps</h3>
+                        <p class="category">Cosmetics</p>
+                        <p class="price">₹180</p>
+                        <button class="btn-premium btn-gold buy-whatsapp" data-product="Herbal Soaps">Order via WhatsApp</button>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card glass-card scroll-reveal" data-category="wellness">
+                    <img data-src="https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&w=400&q=80" src="placeholder.jpg" alt="Herbal Oils" class="lazy-image">
+                    <div class="product-info">
+                        <h3>Herbal Oils</h3>
+                        <p class="category">Wellness</p>
+                        <p class="price">₹450</p>
+                        <button class="btn-premium btn-gold buy-whatsapp" data-product="Herbal Oils">Order via WhatsApp</button>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card glass-card scroll-reveal" data-category="cosmetics">
+                    <img data-src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=400&q=80" src="placeholder.jpg" alt="Shatritha Shampoo" class="lazy-image">
+                    <div class="product-info">
+                        <h3>Shatritha Shampoo</h3>
+                        <p class="category">Cosmetics</p>
+                        <p class="price">₹290</p>
+                        <button class="btn-premium btn-gold buy-whatsapp" data-product="Shatritha Shampoo">Order via WhatsApp</button>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card glass-card scroll-reveal" data-category="wellness">
+                    <img data-src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" src="placeholder.jpg" alt="Dant Manjan" class="lazy-image">
+                    <div class="product-info">
+                        <h3>Dant Manjan</h3>
+                        <p class="category">Wellness</p>
+                        <p class="price">₹120</p>
+                        <button class="btn-premium btn-gold buy-whatsapp" data-product="Dant Manjan">Order via WhatsApp</button>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product-card glass-card scroll-reveal" data-category="digestive">
+                    <img data-src="https://images.unsplash.com/photo-1514733670139-4d87a1941d55?auto=format&fit=crop&w=400&q=80" src="placeholder.jpg" alt="Gas Churna" class="lazy-image">
+                    <div class="product-info">
+                        <h3>Gas Churna</h3>
+                        <p class="category">Digestive</p>
+                        <p class="price">₹150</p>
+                        <button class="btn-premium btn-gold buy-whatsapp" data-product="Gas Churna">Order via WhatsApp</button>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="product-card glass-card scroll-reveal" data-category="digestive">
+                    <img data-src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=400&q=80" src="placeholder.jpg" alt="Chat Masala" class="lazy-image">
+                    <div class="product-info">
+                        <h3>Chat Masala</h3>
+                        <p class="category">Digestive</p>
+                        <p class="price">₹95</p>
+                        <button class="btn-premium btn-gold buy-whatsapp" data-product="Chat Masala">Order via WhatsApp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section section-padding">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Our Sanctuary</h2>
+                <p>A glimpse into our serene environments and transcendental healing sanctuaries.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item scroll-reveal">
+                    <img data-src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80" src="placeholder.jpg" alt="Treatment room" class="lazy-image">
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img data-src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80" src="placeholder.jpg" alt="Himalayan mountains nature" class="lazy-image">
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img data-src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80" src="placeholder.jpg" alt="Yoga Session" class="lazy-image">
+                </div>
+                <div class="gallery-item scroll-reveal">
+                    <img data-src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=600&q=80" src="placeholder.jpg" alt="Herbal Therapy" class="lazy-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+        <div class="container about-grid">
+            <div class="about-image scroll-reveal">
+                <img data-src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80" src="placeholder.jpg" alt="Adiyogi Manish Bhagat" class="lazy-image profile-pic">
+            </div>
+            <div class="about-text scroll-reveal">
+                <h2>About Adiyogi Manish Bhagat</h2>
+                <hr class="gold-divider">
+                <p>Guided by deep respect for the Earth and ancestral healing arts, Adiyogi Manish Bhagat has spent over a decade integrating profound Naturopathic regimes with pristine Vedic Ayurveda treatments.</p>
+                <p>Our vision transcends mere treatments; we focus on root-cause eradication. By curating personalized biological pathways, nature-aligned nutrition plans, and therapeutic physical interventions, we return your body to its innate homeostatic wisdom.</p>
+                <div class="badges">
+                    <span><i class="fas fa-award"></i> Master Practitioner</span>
+                    <span><i class="fas fa-heart"></i> 100% Organic Sourcing</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment & Form Booking Section -->
+    <section id="appointment" class="appointment-section section-padding">
+        <div class="container form-container glass-card scroll-reveal">
+            <div class="section-header">
+                <h2>Request An Appointment</h2>
+                <p>Embark on your personal pathway to peak vitality today.</p>
+            </div>
+            <form id="appointment-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Mobile Number</label>
+                        <input type="tel" id="phone" required placeholder="+91 XXXXX XXXXX">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Select Service</label>
+                        <select id="service" required>
+                            <option value="" disabled selected>Choose a therapy...</option>
+                            <option value="Panchakarma">Panchakarma Therapy</option>
+                            <option value="Fire Cupping">Fire Cupping Therapy</option>
+                            <option value="Full Body Massage">Full Body Massage</option>
+                            <option value="Head Massage">Head Massage</option>
+                            <option value="Foot Massage">Foot Massage</option>
+                            <option value="Nature Trail">Nature Trail</option>
+                            <option value="Consultation">Naturopathy Consultation</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time Slot</label>
+                        <input type="time" id="time" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message / Health Concerns</label>
+                    <textarea id="message" rows="4" placeholder="Briefly let us know about any dynamic needs or conditions..."></textarea>
+                </div>
+                <button type="submit" class="btn-premium btn-gold-fill btn-block">Confirm Booking Schedule</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Testimonials & Reviews Section -->
+    <section class="testimonials-section section-padding">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Voices of Transformation</h2>
+                <p>Authentic reviews left by patrons who recovered dynamic vitality under our care.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card glass-card scroll-reveal">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"The Panchakarma therapy here is unparalleled. It felt like every cell in my body was rebooted to factory wellness settings. Truly life-transforming."</p>
+                    <h4>- Rajesh Sharma</h4>
+                </div>
+                <div class="testimonial-card glass-card scroll-reveal">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Superb fire cupping! It significantly reduced my persistent chronic athletic shoulder pains. Exceptional experience."</p>
+                    <h4>- Priya Patel</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="faq-section section-padding">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-accordion scroll-reveal">
+                <div class="faq-item">
+                    <button class="faq-question">What is Panchakarma and who is it meant for? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Panchakarma is an intricate purification procedure suited for anyone suffering from deep-seated digestive, joint, respiratory, or skin conditions, or simply for deep cellular rejuvenation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Are your products entirely natural and preservative-free? <i class="fas fa-chevron-down"></i></button>
+                    <div class="faq-answer">
+                        <p>Absolutely. Every formula—from Shatritha Shampoo to Gas Churna—is harvested in chemical-free zones and contains no parabens, artificial fragrance, or chemical stabilizers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Integration -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container contact-grid">
+            <div class="contact-info glass-card scroll-reveal">
+                <h2>Connect With Us</h2>
+                <p class="desc">Reach out for any special accommodations, business collaborations, or queries.</p>
+                <ul class="contact-details">
+                    <li><i class="fas fa-map-marker-alt text-gold"></i> Rishikesh, Uttarakhand, India</li>
+                    <li><i class="fas fa-phone text-gold"></i> <a href="tel:+91XXXXXXXXXX">+91 XXXXX XXXXX</a></li>
+                    <li><i class="fas fa-envelope text-gold"></i> <a href="mailto:contact@adiyogimanishbhagat.in">contact@adiyogimanishbhagat.in</a></li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="map-container scroll-reveal">
+                <!-- Premium Dark/Custom Themed Google Maps Embed Code -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13783.56581373977!2d78.29315354999999!3d30.12592095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39091630138cf19f%3A0xe6bf446ee2347962!2sRishikesh%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1689254848324!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating UI elements -->
+    <a href="https://wa.me/91XXXXXXXXXX?text=Hi%20Adiyogi,%20I'd%20like%20to%20know%20more%20about%20your%20services." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container text-center">
+            <p>&copy; 2026 Adiyogi Manish Bhagat. All rights reserved. Crafted with ❤️ for holistic wellness.</p>
+        </div>
+    </footer>
+
+    <!-- Core Script -->
+    <script src="script.js"></script>
+</body>
+</html>
