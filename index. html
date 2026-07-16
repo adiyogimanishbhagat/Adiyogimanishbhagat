@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adiyogi Manish Bhagat | Premium Wellness AI Assistant</title>
+    <!-- Tailwind CSS for modern look -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom Premium Colors */
+        .bg-forest { background-color: #1b4332; }
+        .text-gold { color: #d4af37; }
+        .border-gold { border-color: rgba(212, 175, 55, 0.3); }
+        .bg-gold-gradient { background: linear-gradient(135deg, #d4af37, #cd7f32); }
+        
+        /* Smooth Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #112a1f; }
+        ::-webkit-scrollbar-thumb { background: #d4af37; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-stone-950 text-stone-100 min-h-screen flex flex-col justify-between font-sans">
+
+    <!-- Premium Luxury Header -->
+    <header class="border-b border-gold bg-emerald-950/80 backdrop-blur-md sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-gold-gradient flex items-center justify-center text-xl shadow-lg">
+                <span class="text-white font-bold text-lg">🕉️</span>
+            </div>
+            <div>
+                <h1 class="font-bold text-base md:text-lg tracking-wide text-amber-400">Adiyogi Manish Bhagat</h1>
+                <p class="text-xs text-stone-300">Naturopathy & Wellness Assistant</p>
+            </div>
+        </div>
+        <a href="tel:+919876543210" class="text-xs bg-emerald-900 hover:bg-emerald-800 text-amber-300 px-3 py-2 rounded-full border border-amber-500/30 transition flex items-center gap-1">
+            <i class="fas fa-phone"></i> Call Now
+        </a>
+    </header>
+
+    <!-- Main Chat Workspace -->
+    <main class="flex-1 max-w-3xl w-full mx-auto px-4 py-6 flex flex-col justify-between overflow-hidden" style="height: calc(100vh - 140px);">
+        
+        <!-- Chat Area -->
+        <div id="chatArea" class="flex-1 overflow-y-auto space-y-6 pr-2 pb-4">
+            <!-- Greeting Message -->
+            <div class="flex gap-4 items-start">
+                <div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-sm shrink-0 shadow-md">🧘</div>
+                <div class="bg-emerald-950/40 border border-emerald-900/60 rounded-2xl px-4 py-3 max-w-[85%] text-stone-200 shadow-sm leading-relaxed">
+                    Pranam! 🙏 Welcome to **Adiyogi Manish Bhagat Wellness Center**. 
+                    <br><br>
+                    I am your wellness assistant. How can I guide you today? You can ask me about our **Therapies**, **Herbal Products**, or book an **Appointment** right here!
+                </div>
+            </div>
+        </div>
+
+        <!-- Smart Quick Selection Buttons -->
+        <div id="suggestions" class="grid grid-cols-2 gap-2 my-4 max-w-2xl mx-auto w-full">
+            <button onclick="sendQuickPrompt('What therapies do you offer?')" class="text-left text-xs bg-emerald-950/30 border border-emerald-900/80 hover:border-amber-500/50 hover:bg-emerald-950/60 p-3 rounded-xl transition text-stone-300">
+                <span class="text-amber-400 block font-semibold mb-1">🌿 Our Therapies</span>
+                Panchakarma, Fire Cupping & Massage
+            </button>
+            <button onclick="sendQuickPrompt('Show me your herbal products')" class="text-left text-xs bg-emerald-950/30 border border-emerald-900/80 hover:border-amber-500/50 hover:bg-emerald-950/60 p-3 rounded-xl transition text-stone-300">
+                <span class="text-amber-400 block font-semibold mb-1">🧴 Natural Products</span>
+                Herbal Soaps, Oils & Shampoos
+            </button>
+            <button onclick="sendQuickPrompt('How do I book an appointment?')" class="text-left text-xs bg-emerald-950/30 border border-emerald-900/80 hover:border-amber-500/50 hover:bg-emerald-950/60 p-3 rounded-xl transition text-stone-300">
+                <span class="text-amber-400 block font-semibold mb-1">📅 Book Appointment</span>
+                Schedule your consultation online
+            </button>
+            <button onclick="sendQuickPrompt('Where is the center located?')" class="text-left text-xs bg-emerald-950/30 border border-emerald-900/80 hover:border-amber-500/50 hover:bg-emerald-950/60 p-3 rounded-xl transition text-stone-300">
+                <span class="text-amber-400 block font-semibold mb-1">📍 Address & Contact</span>
+                Get location & direct contact details
+            </button>
+        </div>
+
+        <!-- Chat Input Form -->
+        <div class="w-full max-w-2xl mx-auto">
+            <form id="chatForm" onsubmit="handleSend(event)" class="relative flex items-center">
+                <input type="text" id="userInput" autocomplete="off" placeholder="Ask about therapies, products, or bookings..." class="w-full bg-emerald-950/50 border border-emerald-900/80 focus:border-amber-500 focus:ring-1 focus:ring-amber-500 rounded-2xl pl-4 pr-12 py-3 text-stone-100 placeholder-stone-500 outline-none transition text-sm shadow-xl">
+                <button type="submit" class="absolute right-2 bg-gold-gradient hover:opacity-90 text-white w-9 h-9 rounded-xl flex items-center justify-center transition shadow-md">
+                    <i class="fas fa-paper-plane text-sm"></i>
+                </button>
+            </form>
+            
+            <!-- Quick WhatsApp Floating Indicator -->
+            <div class="flex justify-center gap-4 mt-3">
+                <a href="https://wa.me/919876543210" target="_blank" class="text-[11px] text-emerald-400 hover:text-emerald-300 flex items-center gap-1 transition">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <span class="text-stone-600 text-[11px]">•</span>
+                <a href="https://adiyogimanishbhagat.in" target="_blank" class="text-[11px] text-amber-400 hover:text-amber-300 flex items-center gap-1 transition">
+                    <i class="fas fa-globe"></i> Visit Website
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        const chatArea = document.getElementById('chatArea');
+        const userInput = document.getElementById('userInput');
+        const suggestions = document.getElementById('suggestions');
+
+        // Professional Database of Adiyogi Manish Bhagat
+        const knowledgeBase = {
+            therapies: `We offer premium traditional wellness treatments:<br><br>
+                🟢 **Panchakarma Therapy** - Full body detoxification.<br>
+                🔥 **Fire Cupping Therapy** - Instant deep muscular pain relief.<br>
+                💆‍♂️ **Full Body, Head & Foot Massages** - Relaxing herbal oil massage.<br>
+                🚶‍♂️ **Nature Trail & Naturopathy Consultation** - Personalized organic healing plans.<br><br>
+                *Which therapy would you like to inquire about?*`,
+            
+            products: `Discover our chemical-free, premium herbal solutions:<br><br>
+                🧼 **Herbal Soaps & Oils** - Pure organic nourishment.<br>
+                🧴 **Shatritha Shampoo** - For strong, healthy hair.<br>
+                🦷 **Dant Manjan** - Complete ayurvedic dental protection.<br>
+                🌱 **Gas Churna & Chat Masala** - Enhances digestion naturally.<br><br>
+                *You can buy them directly at our center or order via WhatsApp!*`,
+            
+            booking: `Booking your wellness session is quick and easy! 📅<br><br>
+                Simply send us your details on WhatsApp or call our support line directly:<br>
+                📞 **Phone:** +91 9876543210<br>
+                💬 **WhatsApp:** Click the link below to chat instantly!<br><br>
+                *Please share your Preferred Service, Date, and Time slot so we can book it for you.*`,
+            
+            location: `📍 **Adiyogi Manish Bhagat Wellness Center**<br><br>
+                Our center is located in a peaceful, nature-friendly environment. <br>
+                📧 **Email:** info@adiyogimanishbhagat.in<br>
+                🌐 **Official Website:** [adiyogimanishbhagat.in](https://adiyogimanishbhagat.in)<br><br>
+                *Would you like to schedule an online appointment today?*`,
+            
+            default: `I can help you with bookings, therapies, or our herbal products. Please select one of the options below or ask a specific question about Adiyogi Manish Bhagat's services! 😊`
+        };
+
+        function addMessage(text, isUser = false) {
+            const wrapper = document.createElement('div');
+            wrapper.className = `flex gap-4 items-start ${isUser ? 'justify-end' : ''}`;
+
+            const avatar = isUser 
+                ? `<div class="w-8 h-8 rounded-full bg-stone-700 flex items-center justify-center text-sm shrink-0 order-2 shadow">👤</div>`
+                : `<div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-sm shrink-0 order-1 shadow">🧘</div>`;
+
+            const messageBox = `
+                <div class="${isUser ? 'bg-amber-500 text-stone-950 rounded-tr-none font-medium' : 'bg-emerald-950/40 border border-emerald-900/60 text-stone-200 rounded-tl-none'} rounded-2xl px-4 py-3 max-w-[85%] shadow-md leading-relaxed text-sm ${isUser ? 'order-1' : ''}">
+                    ${text}
+                </div>
+            `;
+
+            wrapper.innerHTML = avatar + messageBox;
+            chatArea.appendChild(wrapper);
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+
+        function showTyping() {
+            const typingDiv = document.createElement('div');
+            typingDiv.id = 'typing';
+            typingDiv.className = 'flex gap-4 items-start';
+            typingDiv.innerHTML = `
+                <div class="w-8 h-8 rounded-full bg-amber-500 flex items-center justify-center text-sm shrink-0 shadow">🧘</div>
+                <div class="bg-emerald-950/20 border border-emerald-900/40 rounded-2xl px-4 py-2 text-stone-400 text-sm italic">
+                    Consulting Adiyogi Guide... 🍃
+                </div>
+            `;
+            chatArea.appendChild(typingDiv);
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+
+        function removeTyping() {
+            const indicator = document.getElementById('typing');
+            if (indicator) indicator.remove();
+        }
+
+        function getAIResponse(text) {
+            const query = text.toLowerCase();
+            
+            if (query.includes('therapy') || query.includes('therapies') || query.includes('panchakarma') || query.includes('cupping') || query.includes('massage') || query.includes('naturopathy')) {
+                return knowledgeBase.therapies;
+            } else if (query.includes('product') || query.includes('soap') || query.includes('oil') || query.includes('shampoo') || query.includes('churna') || query.includes('dant')) {
+                return knowledgeBase.products;
+            } else if (query.includes('book') || query.includes('appointment') || query.includes('schedule') || query.includes('consultation')) {
+                return knowledgeBase.booking;
+            } else if (query.includes('where') || query.includes('location') || query.includes('address') || query.includes('contact') || query.includes('phone')) {
+                return knowledgeBase.location;
+            } else if (query.includes('hi') || query.includes('hello') || query.includes('hey') || query.includes('pranam')) {
+                return "Pranam! How can I assist you with your health and wellness journey at Adiyogi Manish Bhagat center today?";
+            }
+            return knowledgeBase.default;
+        }
+
+        function handleSend(event) {
+            event.preventDefault();
+            const text = userInput.value.trim();
+            if (!text) return;
+
+            // Hide initial suggestions grid
+            suggestions.classList.add('hidden');
+
+            addMessage(text, true);
+            userInput.value = '';
+
+            showTyping();
+
+            setTimeout(() => {
+                removeTyping();
+                const aiResponse = getAIResponse(text);
+                addMessage(aiResponse, false);
+            }, 800 + Math.random() * 500);
+        }
+
+        function sendQuickPrompt(promptText) {
+            userInput.value = promptText;
+            document.getElementById('chatForm').dispatchEvent(new Event('submit'));
+        }
+    </script>
+</body>
+</html>
